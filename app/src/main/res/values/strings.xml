@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">KeyakiReader</string>
     <string name="action_settings">Settings</string>
+    <string name="blogTitleView">ブログタイトル</string>
+    <string name="blogWriterView">ブログ作成者</string>
+    <string name="blogUpdateTimeView">ブログ更新時間</string>
 </resources>

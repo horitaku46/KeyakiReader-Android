@@ -6,27 +6,24 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.example.horiuchitakuma.keyakireader_android.blog.BlogFragment;
+import com.example.horiuchitakuma.keyakireader_android.member.MemberFragment;
+import com.example.horiuchitakuma.keyakireader_android.news.NewsFragment;
+import com.example.horiuchitakuma.keyakireader_android.settings.SettingsFragment;
 
 
 public class MainActivity extends AppCompatActivity {
 
-
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
@@ -35,22 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 
@@ -65,14 +46,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    BlogFragment blog = new BlogFragment();
-                    return blog;
+                    return new BlogFragment();
                 case 1:
-                    NewsFragment news = new NewsFragment();
-                    return news;
+                    return new NewsFragment();
                 case 2:
-                    MemberFragment member = new MemberFragment();
-                    return member;
+                    return new MemberFragment();
+                case 3:
+                    return new SettingsFragment();
                 default:
                     return null;
             }
@@ -80,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
         @Override
@@ -92,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                     return "NEWS";
                 case 2:
                     return "MEMBER";
+                case 3:
+                    return "SETTINGS";
             }
             return null;
         }
