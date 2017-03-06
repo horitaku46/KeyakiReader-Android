@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="104dp">
+
+    <TextView
+        android:id="@+id/newsTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:maxLines="4"
+        android:text="@string/newsTitleView"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textColor="@color/keyakiDarkGreen"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/newsCategoryView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/newsTitleView"
+        android:layout_marginBottom="6dp"
+        android:maxLines="1"
+        android:text="@string/newsCategoryView"
+        android:textAlignment="center"
+        android:background="@color/keyakiGreen"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/newsUpdateTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/newsCategoryView"
+        android:layout_alignBottom="@+id/newsCategoryView"
+        android:layout_alignEnd="@+id/newsTitleView"
+        android:maxLines="1"
+        android:text="@string/newsUpdateTimeView"
+        android:textAlignment="viewEnd"
+        android:textSize="12sp" />
+
+</RelativeLayout>

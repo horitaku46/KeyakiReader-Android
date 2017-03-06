@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.horiuchitakuma.keyakireader_android.R;
@@ -27,7 +26,6 @@ public class BlogArticleAdapter extends BaseAdapter {
         this.blogArticles = blogArticles;
     }
 
-
     @Override
     public int getCount() {
         return this.blogArticles.size();
@@ -44,18 +42,18 @@ public class BlogArticleAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
-        view = layoutInflater.inflate(R.layout.list_view_blog_row, viewGroup, false);
+    public View getView(int position, View convertView, ViewGroup parent) {
+        convertView = this.layoutInflater.inflate(R.layout.list_view_blog_row, parent, false);
 
-        TextView blogTitleView = (TextView) view.findViewById(R.id.blogTitleView);
-        blogTitleView.setText(blogArticles.get(position).getBlogTitle());
+        TextView blogTitleView = (TextView) convertView.findViewById(R.id.blogTitleView);
+        blogTitleView.setText(this.blogArticles.get(position).getBlogTitle());
 
-        TextView blogWriterView = (TextView) view.findViewById(R.id.blogWriterView);
-        blogWriterView.setText(blogArticles.get(position).getBlogWriter());
+        TextView blogWriterView = (TextView) convertView.findViewById(R.id.blogWriterView);
+        blogWriterView.setText(this.blogArticles.get(position).getBlogWriter());
 
-        TextView blogUpdateTimeView = (TextView) view.findViewById(R.id.blogUpdateTimeView);
-        blogUpdateTimeView.setText(blogArticles.get(position).getBlogUpdateTime());
+        TextView blogUpdateTimeView = (TextView) convertView.findViewById(R.id.blogUpdateTimeView);
+        blogUpdateTimeView.setText(this.blogArticles.get(position).getBlogUpdateTime());
 
-        return view;
+        return convertView;
     }
 }

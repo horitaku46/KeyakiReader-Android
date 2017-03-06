@@ -18,30 +18,29 @@ public class BlogFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View blogfragment = inflater.inflate(R.layout.fragment_blog, container, false);
-
         ListView listView = (ListView) blogfragment.findViewById(R.id.listView);
 
-        ArrayList<BlogArticle> blogArticleList = new ArrayList<>();
-        blogArticleList.add(new BlogArticle("葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん",
+        ArrayList<BlogArticle> blogArticles = new ArrayList<>();
+        blogArticles.add(new BlogArticle("葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん葵ちゃん",
                 "渡辺梨加",
                 "2017/03/04 33:33"));
-        blogArticleList.add(new BlogArticle("べりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさ",
+        blogArticles.add(new BlogArticle("べりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさべりさ",
                 "渡邉理佐",
                 "2017/03/04 33:33"));
-        blogArticleList.add(new BlogArticle("ぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃん",
+        blogArticles.add(new BlogArticle("ぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃんぺーちゃん",
                 "守屋茜",
                 "2017/03/04 33:33"));
-        blogArticleList.add(new BlogArticle("うちの事 背負える男になれよ！",
+        blogArticles.add(new BlogArticle("うちの事 背負える男になれよ！",
                 "守屋茜",
                 "2017/03/04 33:33"));
-        blogArticleList.add(new BlogArticle("必死だなw",
+        blogArticles.add(new BlogArticle("必死だなw",
                 "志田愛佳",
                 "2017/03/04 33:33"));
-        blogArticleList.add(new BlogArticle("ねぇ、謝って",
+        blogArticles.add(new BlogArticle("ねぇ、謝って",
                 "渡邉理佐",
                 "2017/03/04 33:33"));
-        BlogArticleAdapter adapter = new BlogArticleAdapter(blogfragment.getContext(), blogArticleList);
 
+        BlogArticleAdapter adapter = new BlogArticleAdapter(blogfragment.getContext(), blogArticles);
         listView.setAdapter(adapter);
 
         return blogfragment;
