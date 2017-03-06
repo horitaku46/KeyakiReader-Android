@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
         android:gravity="center"
         android:maxLines="4"
         android:text="@string/newsTitleView"
@@ -28,11 +28,12 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/newsTitleView"
         android:layout_marginBottom="6dp"
+        android:background="@color/keyakiGreen"
         android:maxLines="1"
         android:text="@string/newsCategoryView"
         android:textAlignment="center"
-        android:background="@color/keyakiGreen"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/newsUpdateTimeView"
